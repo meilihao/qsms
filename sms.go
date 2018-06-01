@@ -61,7 +61,7 @@ func (c *QcloudSMS) SendSMSSingle(ss SMSSingleReq) error {
 	json.Unmarshal([]byte(resp), &res)
 
 	if res.Result == SUCCESS {
-		return errors.New("发送成功")
+		return nil
 	}
 
 	return errors.New(res.Errmsg)
