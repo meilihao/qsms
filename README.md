@@ -99,6 +99,11 @@ client.SetDebug(true)
 
 [完整文档](https://godoc.org/github.com/meilihao/qsms)
 
+
+## thanks(fork from)
+- [qichengzx/qcloudsms_go](https://github.com\qichengzx\qcloudsms_go)
+- [ricktian1226/qsms](https://github.com/ricktian1226/qsms)
+
 ## License
 
 This project is under the MIT License.
