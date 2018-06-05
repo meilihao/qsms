@@ -1,20 +1,19 @@
 package qcloudsms
 
 var (
-	appid string = "yourappid"
+	appid  string = "yourappid"
 	appkey string = "yourappkey"
-	sign string = "yoursign"
 )
 
 func ExampleNewClient() {
-	opt := NewOptions(appid,appkey,sign)
+	opt := NewOptions(appid, appkey)
 	// 可以为 options 指定debug
 	opt.Debug = true
 	NewClient(opt)
 }
 
 func ExampleQcloudSMS_SendVoice() {
-	opt := NewOptions(appid,appkey,sign)
+	opt := NewOptions(appid, appkey)
 
 	var client = NewClient(opt)
 	//也可以在生成Client实例后设定 debug 模式
@@ -31,7 +30,7 @@ func ExampleQcloudSMS_SendVoice() {
 }
 
 func ExampleQcloudSMS_NewSign() {
-	opt := NewOptions(appid,appkey,sign)
+	opt := NewOptions(appid, appkey)
 	opt.Debug = true
 
 	var client = NewClient(opt)
@@ -46,7 +45,7 @@ func ExampleQcloudSMS_NewSign() {
 }
 
 func ExampleQcloudSMS_ModTemplate() {
-	opt := NewOptions(appid,appkey,sign)
+	opt := NewOptions(appid, appkey)
 	opt.Debug = true
 
 	var client = NewClient(opt)
@@ -63,7 +62,7 @@ func ExampleQcloudSMS_ModTemplate() {
 }
 
 func ExampleQcloudSMS_SendSMSSingle() {
-	opt := NewOptions(appid,appkey,sign)
+	opt := NewOptions(appid, appkey)
 	opt.Debug = true
 
 	var client = NewClient(opt)
@@ -78,7 +77,7 @@ func ExampleQcloudSMS_SendSMSSingle() {
 }
 
 func ExampleQcloudSMS_GetTemplateByPage() {
-	opt := NewOptions(appid,appkey,sign)
+	opt := NewOptions(appid, appkey)
 	opt.Debug = true
 
 	var client = NewClient(opt)
@@ -87,7 +86,7 @@ func ExampleQcloudSMS_GetTemplateByPage() {
 }
 
 func ExampleQcloudSMS_DelSign() {
-	opt := NewOptions(appid,appkey,sign)
+	opt := NewOptions(appid, appkey)
 	opt.Debug = true
 
 	var client = NewClient(opt)

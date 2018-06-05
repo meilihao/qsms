@@ -3,8 +3,8 @@
 
 [![Build Status](https://api.travis-ci.org/qichengzx/qcloudsms_go.svg)](https://travis-ci.org/qichengzx/qcloudsms_go)
 [![Build status](https://ci.appveyor.com/api/projects/status/288d9l3bihmsjseo/branch/master?svg=true)](https://ci.appveyor.com/project/qichengzx/qcloudsms-go/branch/master)
-[![GoDoc](https://godoc.org/github.com/qichengzx/qcloudsms_go?status.svg)](https://godoc.org/github.com/qichengzx/qcloudsms_go)
-[![Go Report Card](https://goreportcard.com/badge/github.com/qichengzx/qcloudsms_go)](https://goreportcard.com/report/github.com/qichengzx/qcloudsms_go)
+[![GoDoc](https://godoc.org/github.com/meilihao/qsms?status.svg)](https://godoc.org/github.com/meilihao/qsms)
+[![Go Report Card](https://goreportcard.com/badge/github.com/meilihao/qsms)](https://goreportcard.com/report/github.com/meilihao/qsms)
 [![license](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/qichengzx/qcloudsms_go/master/LICENSE)
 
 ## Overview
@@ -75,29 +75,29 @@
 ## 安装
 
 ```
-go get github.com/qichengzx/qcloudsms_go
+go get github.com/meilihao/qsms
 ```
 
 ## 用法
 
-```Go
+```go
 
-import "github.com/qichengzx/qcloudsms_go"
+import "github.com/meilihao/qsms"
 
-opt := qcloudsms.NewOptions("yourappid","yourappkey","yoursign")
+opt := qcloudsms.NewOptions("yourappid","yourappkey")
 
 var client = qcloudsms.NewClient(opt)
 client.SetDebug(true)
 
 ```
 
-更多示例可在 [Example](https://github.com/qichengzx/qcloudsms_go/blob/master/example.go) 或 [godoc](https://godoc.org/github.com/qichengzx/qcloudsms_go#pkg-examples) 查看
+更多示例可在 [Example](https://github.com/meilihao/qsms/blob/master/example.go) 或 [godoc](https://godoc.org/github.com/meilihao/qsms#pkg-examples) 查看
 
 注意：example.go 中的示例代码，调用 NewOptions()，NewClient(opt) 时没有加包名，在实际调用中需要加入，或 import 时加入省略包名的操作。
 
 ## Documentation
 
-[完整文档](https://godoc.org/github.com/qichengzx/qcloudsms_go)
+[完整文档](https://godoc.org/github.com/meilihao/qsms)
 
 ## License
 

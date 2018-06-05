@@ -152,11 +152,10 @@ var (
 )
 
 // NewOptions 返回一个新的 *Options
-func NewOptions(appid, appkey, sign string) *Options {
+func NewOptions(appid, appkey string) *Options {
 	opt := &Options{
 		APPID:  appid,
 		APPKEY: appkey,
-		SIGN:   sign,
 
 		RandomLen: 6,
 		UserAgent: SDKName + "/" + SDKVersion,
@@ -192,12 +191,6 @@ func (c *QcloudSMS) SetAPPID(appid string) *QcloudSMS {
 // SetAPPKEY 为实例设置 APPKEY
 func (c *QcloudSMS) SetAPPKEY(appkey string) *QcloudSMS {
 	c.Options.APPKEY = appkey
-	return c
-}
-
-// SetSIGN 为实例设置 SIGN
-func (c *QcloudSMS) SetSIGN(sign string) *QcloudSMS {
-	c.Options.SIGN = sign
 	return c
 }
 
