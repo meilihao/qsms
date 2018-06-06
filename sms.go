@@ -105,11 +105,11 @@ type SMSMultiResult struct {
 }
 
 // SendSMSMulti 群发短信
-func (c *QcloudSMS) SendSMSMulti(sms SMSMultiReq) (bool, error) {
+func (c *QcloudSMS) SendSMSMulti(sms SMSMultiReq) error {
 	var sigMobile []string
 
 	if len(sms.Tel) > MULTISMSMAX {
-		return false, ErrMultiCount
+		return ErrMultiCount
 	}
 
 	for _, m := range sms.Tel {
@@ -125,17 +125,17 @@ func (c *QcloudSMS) SendSMSMulti(sms SMSMultiReq) (bool, error) {
 
 	resp, err := c.NewRequest(sms)
 	if err != nil {
-		return false, err
+		return err
 	}
 
 	var res SMSMultiResult
 	json.Unmarshal([]byte(resp), &res)
 
 	if res.Result == SUCCESS {
-		return true, errors.New("发送成功")
+		return nil
 	}
 
-	return false, errors.New(res.Errmsg)
+	return errors.New(res.Errmsg)
 }
 
 // StatusMobileReq 拉取单个手机短信状态请求结构
